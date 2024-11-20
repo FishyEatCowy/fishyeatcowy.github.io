@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(7, 16, 28);
+}
+
+li, a, button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.home a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  transition: all 0.4s ease 0s;
+  font-size: 3rem;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+.home a:hover {
+  color: rgb(51, 11, 103);
+}
+
+p {
+  display: inline-flex;
+  transition: all 0.4s ease 0s;
+  color: rgb(127, 48, 229);
+  font-size: 6rem;
+}
+p:hover {
+  color: rgb(51, 11, 103);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 3%;
+  height: 3rem;
+  width: 100%;
+}
+
+.navlinks li {
+  display: inline-flex;
+  padding: 0px 30px;
+  margin-top: 2rem;
+}
+
+.navlinks li a, .home {
+  transition: all 0.3s ease 0s;
+}
+.navlinks li a:hover, .home:hover {
+  color: rgb(51, 11, 103);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(10, 105px);
+  grid-template-rows: repeat(7, 113px);
+  grid-gap: 5px;
+  width: 1050px;
+  height: 800px;
+  margin-left: 10%;
+  margin-top: 6rem;
+}
+
+.item {
+  background-color: rgb(95, 128, 172);
+  border-radius: 20px;
+  opacity: 0.3;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+}
+
+.cpu {
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+
+.gpu {
+  grid-row: 1/5;
+  grid-column: 4/7;
+}
+
+.motherboard {
+  grid-row: 5/8;
+  grid-column: 1/7;
+}
+
+.ssd {
+  grid-row: 1/3;
+  grid-column: 7/11;
+}
+
+.cooling {
+  grid-row: 5/8;
+  grid-column: 7/9;
+}
+
+.power-supply {
+  grid-row: 5/8;
+  grid-column: 9/11;
+}
+
+.ram {
+  grid-row: 3/5;
+  grid-column: 7/11;
+}
+
+/*# sourceMappingURL=style.css.map */
