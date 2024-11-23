@@ -81,9 +81,10 @@ header {
 
 .container {
     display: flex;
-    gap: 10px;
     flex-direction: row;
+
     margin: 100px auto;
+    gap: 10px;
 
     height: 800px;
     width: 80%;

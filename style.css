@@ -64,9 +64,9 @@ header {
 
 .container {
   display: flex;
-  gap: 10px;
   flex-direction: row;
   margin: 100px auto;
+  gap: 10px;
   height: 800px;
   width: 80%;
   background-color: rgb(7, 16, 28);
