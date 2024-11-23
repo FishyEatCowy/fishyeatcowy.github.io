@@ -12,6 +12,7 @@
 
 $hovercolor: rgb(51, 11, 103);
 $backgroundcolor: rgb(7, 16, 28);
+$gridcolor: rgb(94, 36, 196);
 
 * {
     margin: 0;
@@ -84,7 +85,7 @@ header {
     flex-direction: row;
     margin: 100px auto;
 
-    height: 600px;
+    height: 800px;
     width: 80%;
     background-color: $backgroundcolor;
 }
@@ -110,21 +111,57 @@ header {
 .row {
     display: flex;
     flex: 1;
-    transition: 200ms ease;
+    transition: 200ms ease-in-out;
+    // opacity: 0.5;
     
     &:hover {
         flex: 3;
     }
 
-    @include create-border(red, 25px, 2px)
+    
+
+    @include create-border(red, 25px, none)
+}
+
+.l-top-row, .l-middle-row, .r-top-row, .r-bottom-row {
+    text-align: center;
+    position: relative;
+
+    background-color: $gridcolor;
+    justify-content: center;
+
+    &:hover p {
+        opacity: 1;
+        color: white;
+    }
+
 }
 
 .title {
-    align-self: center;
-    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    transition: 300ms ease;
 
     font-size: 50px;
     color: white;
+
+    @include create-border(yellow, 25px, none)   
+}
+
+p {
+    display: flex;
+    width: 90%;
+    text-align: justify;
+    font-size: 23px;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 200ms ease-in-out;
 }
 
 .power-supply {
@@ -137,20 +174,32 @@ header {
 
 .l-row-col {
     display: flex;
+    position: relative;
+    background-color: $gridcolor;
 
     transition: 200ms ease;
     &:hover {
         flex: 3;
     }
+    
 }
 
 .l-bottom-row {
     display: flex;
+    
     border: none;
     gap: 10px;
+    
 }
 
 .l-row-col {
     flex: 1;
-    @include create-border(red, 25px, 2px)
+    align-items: center;
+    justify-content: center;
+    &:hover p {
+        opacity: 1;
+        color: white;
+    }
+
+    @include create-border(red, 25px, none)
 }

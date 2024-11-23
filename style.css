@@ -67,7 +67,7 @@ header {
   gap: 10px;
   flex-direction: row;
   margin: 100px auto;
-  height: 600px;
+  height: 800px;
   width: 80%;
   background-color: rgb(7, 16, 28);
 }
@@ -93,19 +93,48 @@ header {
 .row {
   display: flex;
   flex: 1;
-  transition: 200ms ease;
-  border: 2px solid red;
+  transition: 200ms ease-in-out;
+  border: none solid red;
   border-radius: 25px;
 }
 .row:hover {
   flex: 3;
 }
 
+.l-top-row, .l-middle-row, .r-top-row, .r-bottom-row {
+  text-align: center;
+  position: relative;
+  background-color: rgb(94, 36, 196);
+  justify-content: center;
+}
+.l-top-row:hover p, .l-middle-row:hover p, .r-top-row:hover p, .r-bottom-row:hover p {
+  opacity: 1;
+  color: white;
+}
+
 .title {
-  align-self: center;
-  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  transition: 300ms ease;
   font-size: 50px;
   color: white;
+  border: none solid yellow;
+  border-radius: 25px;
+}
+
+p {
+  display: flex;
+  width: 90%;
+  text-align: justify;
+  font-size: 23px;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 200ms ease-in-out;
 }
 
 .power-supply {
@@ -118,6 +147,8 @@ header {
 
 .l-row-col {
   display: flex;
+  position: relative;
+  background-color: rgb(94, 36, 196);
   transition: 200ms ease;
 }
 .l-row-col:hover {
@@ -132,8 +163,14 @@ header {
 
 .l-row-col {
   flex: 1;
-  border: 2px solid red;
+  align-items: center;
+  justify-content: center;
+  border: none solid red;
   border-radius: 25px;
+}
+.l-row-col:hover p {
+  opacity: 1;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
