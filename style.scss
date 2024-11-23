@@ -3,19 +3,25 @@
     font-weight: 500;
 }
 
+@mixin create-border($border-color, $border-radius, $border-size) {
+    border: $border-size solid $border-color;
+    border-radius: $border-radius;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 $hovercolor: rgb(51, 11, 103);
+$backgroundcolor: rgb(7, 16, 28);
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    @include poppins-font();
 }
 
 body {
-    background-color: rgb(7, 16, 28);
+    background-color: $backgroundcolor;
 }
 
 li, a, button {
@@ -26,7 +32,9 @@ li, a, button {
     text-decoration: none;
 }
 
-
+.home {
+    padding-top: 25px;
+}
 
 .home a {
     @include poppins-font();
@@ -42,14 +50,8 @@ li, a, button {
 }
 
 p {
-    display: inline-flex;
-    transition: all 0.4s ease 0s;
-    color: rgb(127, 48, 229);
-    font-size: 6rem;
-
-    &:hover {
-        color: $hovercolor;
-    }
+   font-size: 24px;
+   text-align: center; 
 }
 
 header {
@@ -76,4 +78,79 @@ header {
     }
 }
 
+.container {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    margin: 100px auto;
 
+    height: 600px;
+    width: 80%;
+    background-color: $backgroundcolor;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    flex: 2;
+    @include create-border(red, 25px, none)
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+
+    @include create-border(red, 25px, none)
+}
+
+.row {
+    display: flex;
+    flex: 1;
+    transition: 200ms ease;
+    
+    &:hover {
+        flex: 3;
+    }
+
+    @include create-border(red, 25px, 2px)
+}
+
+.title {
+    align-self: center;
+    margin: auto;
+
+    font-size: 50px;
+    color: white;
+}
+
+.power-supply {
+    font-size: 45px;
+}
+
+.motherboard {
+    font-size: 45px;
+}
+
+.l-row-col {
+    display: flex;
+
+    transition: 200ms ease;
+    &:hover {
+        flex: 3;
+    }
+}
+
+.l-bottom-row {
+    display: flex;
+    border: none;
+    gap: 10px;
+}
+
+.l-row-col {
+    flex: 1;
+    @include create-border(red, 25px, 2px)
+}

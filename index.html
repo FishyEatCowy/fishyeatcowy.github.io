@@ -10,7 +10,7 @@
     </head>
     <body>       
         <header>
-            <h1 class="home"><a href="#">Computer</a><p>.</p></h1>
+            <div class="home"><a href="#">Computer.</a></div>
             <nav>
                 <ul class="navlinks">
                     <li><a href="#">CPU</a></li>
@@ -19,19 +19,40 @@
                     <li><a href="#">RAM</a></li>
                     <li><a href="#">SSD</a></li>
                     <li><a href="#">Power Supply</a></li>
-                    <li><a href="#">Cooling</a></li>
                 </ul>
             </nav>
         </header>
 
         <div class="container">
-                <div class="item cpu">CPU</div>
-                <div class="item motherboard">Motherboard</div>
-                <div class="item gpu">GPU</div>
-                <div class="item ram">RAM</div>
-                <div class="item ssd">SSD</div>
-                <div class="item power-supply">Power Supply</div>
-                <div class="item cooling">Cooling</div>
+                <div class="left-column">
+                    <div class="row l-top-row">
+                        <div class="title cpu">CPU</div>
+                        <!-- <div class="paragraph cpu">
+                            CPU (Central Processing Unit) is the primary component of a computer responsible for executing instructions and performing computations. Often referred to as the "brain" of the computer, the CPU handles tasks by processing data and running programs.
+                        </div> -->
+                    </div>
+                    <div class="row l-middle-row">
+                        <div class="title gpu">GPU</div>
+                    </div>
+
+                    <div class="row l-bottom-row">
+                        <div class="l-row-col row1">
+                            <div class="title ram">RAM</div>
+                        </div>
+                        <div class="l-row-col row2">
+                            <div class="title ssd">SSD</div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right-column">
+                    <div class="row r-top-row">
+                        <div class="title motherboard">Motherboard</div>
+                    </div>
+                    <div class="row r-bottom-row">
+                        <div class="title power-supply">Power Supply</div>
+                    </div>
+                </div>
         </div>
     </body>
 </html>
